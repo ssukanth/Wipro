@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="sanity" verbose="1" parallel="classes" thread-count="1">
+ <test name="sanity">
+ <parameter name ="aPort" value="4723"/>
+		<groups>
+			<run>
+				<include name="dryrun" />
+			</run>
+		</groups>
+    	<packages>
+			<package name="com.ebay.wipro.testcases" />
+		</packages>
+	</test>
+</suite>

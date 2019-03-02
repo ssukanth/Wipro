@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="117359" started-at="2019-03-02T18:36:45Z" finished-at="2019-03-02T18:38:42Z">
+    <groups>
+      <group name="dryrun">
+        <method signature="EbayOrders.ebay_PlaceOrder()[pri:0, instance:com.ebay.wipro.testcases.EbayOrders@369f73a2]" name="ebay_PlaceOrder" class="com.ebay.wipro.testcases.EbayOrders"/>
+      </group> <!-- dryrun -->
+    </groups>
+    <test name="Default test" duration-ms="117359" started-at="2019-03-02T18:36:45Z" finished-at="2019-03-02T18:38:42Z">
+      <class name="com.ebay.wipro.testcases.EbayOrders">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.ebay.wipro.testcases.EbayOrders@369f73a2]" name="setup" is-config="true" duration-ms="33736" started-at="2019-03-03T00:06:45Z" finished-at="2019-03-03T00:07:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="ebay_PlaceOrder()[pri:0, instance:com.ebay.wipro.testcases.EbayOrders@369f73a2]" name="ebay_PlaceOrder" duration-ms="81383" started-at="2019-03-03T00:07:18Z" finished-at="2019-03-03T00:08:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ebay_PlaceOrder -->
+        <test-method status="PASS" signature="testStatus(org.testng.ITestResult)[pri:0, instance:com.ebay.wipro.testcases.EbayOrders@369f73a2]" name="testStatus" is-config="true" duration-ms="2219" started-at="2019-03-03T00:08:40Z" finished-at="2019-03-03T00:08:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ebay_PlaceOrder status=SUCCESS method=EbayOrders.ebay_PlaceOrder()[pri:0, instance:com.ebay.wipro.testcases.EbayOrders@369f73a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStatus -->
+      </class> <!-- com.ebay.wipro.testcases.EbayOrders -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
