@@ -64,7 +64,7 @@ public class EbayOrders extends SeleniumUtils  {
 		LandingPage lnp= new LandingPage();
 		lnp.clickIconHamburger();
 		LoginPage loginPage= new LoginPage(driver);
-		loginPage.loginEbay("ssukanthp@gmail.com", "Ssukanth@8");
+		loginPage.loginEbay("", "");
 		ItemSearchPage searchPage= new ItemSearchPage(driver);
 		CartPage cart= new CartPage(driver);
 		String searchPage_ItemPrice=searchPage.searchAndSelectRandomItem("65 inch tv", 3);
