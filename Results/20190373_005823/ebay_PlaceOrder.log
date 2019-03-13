@@ -1,0 +1,83 @@
+ 48 2019-03-14 00:58:46,207- Effective Result File:C:\Users\Businessman\git\Wipro\Wipro\./Results/
+ 49 2019-03-14 00:58:46,226- The cointext of the app:NATIVE_APP
+ 119 2019-03-14 00:58:46,357- Running The Method :getIconHamburger
+ 120 2019-03-14 00:58:46,357- Finding the element for idlogo
+ 140 2019-03-14 00:58:46,627- Finding the element for accessibility_IdMain navigation, open
+ 142 2019-03-14 00:58:46,628- Running The Method :getIconHamburger
+ 119 2019-03-14 00:58:46,974- Running The Method :getIconSignIn
+ 120 2019-03-14 00:58:46,974- Finding the element for idtextview_sign_out_status
+ 119 2019-03-14 00:58:48,139- Running The Method :getEdit_UserName
+ 120 2019-03-14 00:58:48,139- Finding the element for idedit_text_username
+ 119 2019-03-14 00:58:54,935- Running The Method :getEdit_Pwd
+ 120 2019-03-14 00:58:54,935- Finding the element for idedit_text_password
+ 184 2019-03-14 00:59:01,074- Running The Method :getBtn_SignIn
+ 185 2019-03-14 00:59:01,074- Finding the element for xpath//*[@text='SIGN IN']
+ 119 2019-03-14 00:59:02,426- Running The Method :getLink_Nothanks
+ 120 2019-03-14 00:59:02,427- Finding the element for idbutton_google_deny
+ 62 2019-03-14 00:59:08,231- Item to be selected is :11
+ 119 2019-03-14 00:59:08,232- Running The Method :getEdit_Search
+ 120 2019-03-14 00:59:08,232- Finding the element for idsearch_box
+ 119 2019-03-14 00:59:09,656- Running The Method :getEdit_SearchField
+ 120 2019-03-14 00:59:09,656- Finding the element for idsearch_src_text
+ 239 2019-03-14 00:59:17,048- Running The Method :searchAndSelectRandomItem
+ 283 2019-03-14 00:59:20,049- Running The Method :searchAndSelectRandomItem
+ 288 2019-03-14 00:59:20,457- List loaded 
+ 239 2019-03-14 00:59:21,215- Running The Method :getCards_ItemTitleSearchResults
+ 78 2019-03-14 00:59:24,309- The size of the result pre scroll3
+ 239 2019-03-14 00:59:24,309- Running The Method :getCards_ItemTitleSearchResults
+ 88 2019-03-14 00:59:27,055- The size of the result pre scroll3
+ 239 2019-03-14 00:59:27,055- Running The Method :searchAndSelectRandomItem
+ 239 2019-03-14 00:59:30,056- Running The Method :getCards_ItemTitleSearchResults
+ 91 2019-03-14 00:59:32,251- 
+ 91 2019-03-14 00:59:32,293- 
+ 91 2019-03-14 00:59:33,050- 
+ 283 2019-03-14 00:59:33,050- Running The Method :getSearch_ItemPrice
+ 288 2019-03-14 00:59:33,260- List loaded 
+ 43 2019-03-14 00:59:33,261- The size of the result pre scroll2
+ 283 2019-03-14 00:59:33,261- Running The Method :getSearch_ItemPrice
+ 288 2019-03-14 00:59:33,458- List loaded 
+ 283 2019-03-14 00:59:33,661- Running The Method :getSearch_ItemPrice
+ 288 2019-03-14 00:59:33,829- List loaded 
+ 43 2019-03-14 00:59:33,829- The size of the result pre scroll2
+ 283 2019-03-14 00:59:33,829- Running The Method :getSearch_ItemPrice
+ 288 2019-03-14 00:59:33,981- List loaded 
+ 58 2019-03-14 00:59:34,029- The price of item in search page is:989.00
+ 42 2019-03-14 00:59:34,029- Placing the order for the element:11
+ 239 2019-03-14 00:59:34,029- Running The Method :getCards_ItemTitleSearchResults
+ 44 2019-03-14 00:59:36,176- clickeing on the item with id :com.ebay.mobile:id/cell_collection_item
+ 45 2019-03-14 00:59:36,454- The x and y cordinates fo the ele is :0 : 0
+ 367 2019-03-14 00:59:36,455- Running The Method :buyNow
+ 119 2019-03-14 00:59:36,818- Running The Method :getitemPrice
+ 120 2019-03-14 00:59:36,818- Finding the element for idtextview_item_price
+ 119 2019-03-14 00:59:40,565- Running The Method :getitemPrice
+ 120 2019-03-14 00:59:40,566- Finding the element for idtextview_item_price
+ 49 2019-03-14 00:59:40,701- The price of the item is :989.00
+ 140 2019-03-14 00:59:40,702- Finding the element for accessibility_IdBuy It Now
+ 142 2019-03-14 00:59:40,702- Running The Method :getBuyitNow
+ 60 2019-03-14 00:59:41,498- The price of item in search page is:989.00
+ 61 2019-03-14 00:59:41,499- The price of the item in the search page :+989.00and the pdp page:989.00
+ 119 2019-03-14 00:59:41,502- Running The Method :getChk_ItemPrice
+ 120 2019-03-14 00:59:41,502- Finding the element for idtextview_item_price
+ 119 2019-03-14 00:59:43,759- Running The Method :getChk_ItemPrice
+ 120 2019-03-14 00:59:43,759- Finding the element for idtextview_item_price
+ 57 2019-03-14 00:59:43,862- The price  of the item in the checkout page :989.00
+ 119 2019-03-14 00:59:43,862- Running The Method :getBtnReview
+ 120 2019-03-14 00:59:43,862- Finding the element for idtake_action
+ 367 2019-03-14 00:59:43,891- Running The Method :checkout
+ 65 2019-03-14 00:59:44,303- Test Completed
+ 73 2019-03-14 00:59:47,103- Removed the App
+ 75 2019-03-14 00:59:47,108- Killed the server
+ 56 2019-03-14 00:59:47,110- Running The Method :launchServer
+ 67 2019-03-14 00:59:47,111- Starting emulator for 'Nexus_5X_API_26' ...on ip:0.0.0.0with Port:4730
+ 69 2019-03-14 00:59:47,111- Starting The application 
+ 80 2019-03-14 00:59:47,279- Appium Service Address : - http://0.0.0.0:4730/wd/hub
+ 82 2019-03-14 00:59:47,279- clearSystemFiles : true
+ 82 2019-03-14 00:59:47,279- platformVersion : 8.1
+ 82 2019-03-14 00:59:47,279- AUTO_GRANT_PERMISSIONS : true
+ 82 2019-03-14 00:59:47,279- deviceName : Nexus_5X_API_26
+ 82 2019-03-14 00:59:47,279- browserName : 
+ 82 2019-03-14 00:59:47,280- avd : Nexus_5X_API_26
+ 82 2019-03-14 00:59:47,280- appPackage : com.ebay.mobile
+ 82 2019-03-14 00:59:47,280- platformName : Android
+ 82 2019-03-14 00:59:47,280- noReset : true
+ 82 2019-03-14 00:59:47,280- appActivity : com.ebay.mobile.activities.MainActivity
