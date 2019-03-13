@@ -16,6 +16,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.ebay.wipro.poms.CartPage;
@@ -31,30 +32,16 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class EbayOrders extends SeleniumUtils  {
-  String datStr, resLoc;
-  File fl;
-  FileAppender fa;
-  PatternLayout pl;
-  public EbayOrders() {
+public class EbayOrders extends TestBase  {
+	public EbayOrders() {
 		super();
 	}
-	@BeforeTest
-	//@Parameters("aPort")
-	public void setup(){
-		Date d= new Date();
-		SimpleDateFormat sd= new SimpleDateFormat("YYYY-MM-DD HH:mm:ss");
-		datStr=sd.format(d).replaceAll("-", "").replaceAll(":", "").replace(" ", "_");
-		resLoc=new File(".").getAbsolutePath()+"/Results/"+datStr;
-		fl= new File (resLoc);
-		fl.mkdir();	
-		lg= LogManager.getLogger(this.getClass());
-		pl=new PatternLayout(" %L %d{ISO8601}- %m%n");	
-		driver=launchApp();
+	@DataProvider(name="ebayTest")
+	public String[][] getTestData() throws IOException{
+		return readXl(new File("").getAbsolutePath()+"\\src\\test\\resources\\TestData\\ebay.xlsx");
 	}
-
-	@Test(groups= {"dryrun"})
-	  public void ebay_PlaceOrder() throws IOException {
+	@Test(dataProvider="ebayTest")
+	  public void ebay_PlaceOrder(String uName, String pwd, String searchTerm, String selectIndex) throws IOException {
 		String name = new Object(){}.getClass().getEnclosingMethod().getName();
 		fa=new FileAppender(pl,fl.getAbsolutePath()+"\\\\"+name+".log");
 		lg.addAppender(fa);	
@@ -64,12 +51,12 @@ public class EbayOrders extends SeleniumUtils  {
 		LandingPage lnp= new LandingPage();
 		lnp.clickIconHamburger();
 		LoginPage loginPage= new LoginPage(driver);
-		loginPage.loginEbay("", "");
-		ItemSearchPage searchPage= new ItemSearchPage(driver);
+		loginPage.loginEbay(uName, pwd);
 		CartPage cart= new CartPage(driver);
-		String searchPage_ItemPrice=searchPage.searchAndSelectRandomItem("65 inch tv", 3);
+		ItemSearchPage searchPage= new ItemSearchPage (driver);
+		String searchPage_ItemPrice=searchPage.searchAndSelectRandomItem(searchTerm, Integer.parseInt(selectIndex)-1);
 		lg.debug("The price of item in search page is:"+searchPage_ItemPrice);
-		String pdp_ItemPrice=cart.buyNow(3);
+		String pdp_ItemPrice=cart.buyNow(Integer.parseInt(selectIndex)-1);
 		lg.debug("The price of item in search page is:"+pdp_ItemPrice);
 		lg.debug("The price of the item in the search page :+"+searchPage_ItemPrice+"and the pdp page:"+pdp_ItemPrice);
 		Assert.assertEquals(Float.parseFloat(searchPage_ItemPrice), Float.parseFloat(pdp_ItemPrice));
@@ -77,21 +64,13 @@ public class EbayOrders extends SeleniumUtils  {
 		Assert.assertEquals(Float.parseFloat(chkItem_Pricve), Float.parseFloat(pdp_ItemPrice));
 		lg.debug("Test Completed");
 	  }
+	
+	@Test//this test is for extent reports
+	public void test4Report() {
+		Assert.assertTrue(false);
+	}
+	
 
-		@AfterMethod
-		public void testStatus(ITestResult t) {
-			if(t.getStatus()==ITestResult.FAILURE) {
-				takeScreenshot(resLoc+"/"+t.getName());
-			}
-			try {
-				driver.removeApp("com.ebay.mobile");
-				lg.debug("Removed the App");
-				Runtime.getRuntime().exec("adb kill-server");
-				lg.debug("Killed the server");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+	
 
 }

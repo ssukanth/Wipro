@@ -39,12 +39,13 @@ public class CartPage extends SeleniumUtils {
 	}
 	
 	public String buyNow(int itemIndex) {
+		lg.debug("Placing the order for the element:"+itemIndex+1);
 		List<MobileElement> tList=itemS.getCards_ItemTitleSearchResults();
 		lg.debug("clickeing on the item with id :"+tList.get(itemIndex).getAttribute("resourceId"));
 		lg.debug("The x and y cordinates fo the ele is :"+tList.get(itemIndex).getLocation().getX()+ " : "+tList.get(itemIndex).getLocation().getX());
 		moveToAndAction("tap", tList.get(itemIndex));		
 		System.out.println("Clicked on the item");
-		String mrp=getitemPrice().substring(getitemPrice().indexOf("$")+1);
+		String mrp=getitemPrice().substring(getitemPrice().indexOf("$")+1).replace(",", "");
 		lg.debug("The price of the item is :"+mrp);
 		getBuyitNow().click();
 		return mrp;

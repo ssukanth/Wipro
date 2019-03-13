@@ -31,7 +31,7 @@ public class ItemSearchPage extends SeleniumUtils {
 		return edit_SearchField;
 	}
 	public List<MobileElement> getCards_ItemTitleSearchResults() {
-		sleepTimer(3000);
+		sleepTimer(2000);
 		cards_ItemTitleSearchResults=dri.findElementsById("cell_collection_item");
 		return cards_ItemTitleSearchResults;
 	}
@@ -46,7 +46,7 @@ public class ItemSearchPage extends SeleniumUtils {
 				break;
 			}else {
 				scrollUp();
-				sleepTimer(3000);
+				sleepTimer(2000);
 			}
 		}
 		search_ItemPrice=findElementsByXpaths(".//*[contains(@resource-id,'textview_item_price')]").get(itemIndex).getText();
@@ -59,6 +59,7 @@ public class ItemSearchPage extends SeleniumUtils {
 	}
 	
 	public String searchAndSelectRandomItem(String sItem, int itemIndex) {
+		lg.debug("Item to be selected is :"+itemIndex+1);
 		TouchAction a= new TouchAction(dri);
 		lnp.getEdit_Search().click();
 		getEdit_SearchField().sendKeys(sItem);
@@ -89,7 +90,7 @@ public class ItemSearchPage extends SeleniumUtils {
 		for(MobileElement xs:getCards_ItemTitleSearchResults()) {
 			lg.debug(xs.getText());
 		}
-		return getSearch_ItemPrice(itemIndex).substring(getSearch_ItemPrice(itemIndex).indexOf("$")+1);
+		return getSearch_ItemPrice(itemIndex).substring(getSearch_ItemPrice(itemIndex).indexOf("$")+1).replace(",", "");
 		
 		
 	}

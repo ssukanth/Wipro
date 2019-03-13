@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [sanity]" parallel="classes">
-  <parameter name="port" value="4723"/>
-  <test name="sanity(failed)" parallel="classes">
-    <parameter name="port" value="4723"/>
-    <groups>
-      <run>
-        <include name="dryrun"/>
-      </run>
-    </groups>
+<suite name="Failed suite [sanity]">
+  <parameter name="aPort" value="4723"/>
+  <listeners>
+    <listener class-name="com.ebay.wipro.utilities.reports.TestngListener"/>
+  </listeners>
+  <test name="sanity(failed)">
+    <parameter name="aPort" value="4723"/>
     <classes>
+      <class name="com.ebay.wipro.testcases.TestBase">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.ebay.wipro.testcases.TestBase -->
       <class name="com.ebay.wipro.testcases.EbayOrders">
         <methods>
-          <include name="f"/>
+          <include name="test4Report"/>
+          <include name="launchServer"/>
+          <include name="testStatus"/>
         </methods>
       </class> <!-- com.ebay.wipro.testcases.EbayOrders -->
     </classes>

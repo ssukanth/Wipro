@@ -38,7 +38,7 @@ public class LoginPage extends SeleniumUtils {
 		return findEleById("button_google_deny");
 	}
 
-	public void loginEbay(String uName, String pwd) {
+	public void  loginEbay(String uName, String pwd) {
 		hMenu.clickSignIn();
 		getEdit_UserName().sendKeys(uName);
 		getEdit_Pwd().sendKeys(pwd);
@@ -49,5 +49,7 @@ public class LoginPage extends SeleniumUtils {
 		}catch(NoSuchElementException nsee) {
 			lg.debug("The nothanks button not available");
 		}
+		//return PageFactory.initElements(driver, ItemSearchPage.class);
+		
 	}
 }

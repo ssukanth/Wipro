@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [sanity]">
+  <parameter name="aPort" value="4723"/>
+  <listeners>
+    <listener class-name="com.ebay.wipro.utilities.reports.TestngListener"/>
+  </listeners>
+  <test name="sanity(failed)">
+    <parameter name="aPort" value="4723"/>
     <classes>
-      <class name="com.ebay.wipro.testcases.EbayOrders">
+      <class name="com.ebay.wipro.testcases.TestBase">
         <methods>
           <include name="setup"/>
-          <include name="f"/>
+        </methods>
+      </class> <!-- com.ebay.wipro.testcases.TestBase -->
+      <class name="com.ebay.wipro.testcases.EbayOrders">
+        <methods>
+          <include name="test4Report"/>
+          <include name="launchServer"/>
+          <include name="testStatus"/>
         </methods>
       </class> <!-- com.ebay.wipro.testcases.EbayOrders -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- sanity(failed) -->
+</suite> <!-- Failed suite [sanity] -->

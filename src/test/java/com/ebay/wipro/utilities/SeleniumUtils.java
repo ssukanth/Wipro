@@ -37,12 +37,13 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 
-public class SeleniumUtils {
+public class SeleniumUtils extends FileUtilities {
 	public static AppiumDriver<MobileElement> driver;
 	public static Logger lg;
 	public static EventFiringWebDriver eWebd;
 	public static WebDriverWait initWait;
 	public static StackTraceElement[] stackTraceElements;
+	public static String resLoc;
 	
 	/*
 	* Method Name: launchApp
@@ -87,7 +88,7 @@ public class SeleniumUtils {
 		caps.setCapability("platformVersion", emuCaps.get("platformVersion"));
 		caps.setCapability("clearSystemFiles", emuCaps.get("clearSystemFiles"));
 		//caps.setCapability("browserName", emuCaps.get("browserName"));
-		caps.setCapability("app", "D:\\Wipro_Ebay\\Wipro\\src\\test\\resources\\AppInstallationFiles\\eBay.apk");
+		caps.setCapability("app", new File("").getAbsolutePath()+"\\src\\test\\resources\\AppInstallationFiles\\eBay.apk");
 		caps.setCapability("appPackage", emuCaps.get("appPackage"));
 		caps.setCapability("appActivity", emuCaps.get("appActivity"));
 		caps.setCapability("AUTO_GRANT_PERMISSIONS", emuCaps.get("AUTO_GRANT_PERMISSIONS")); 
@@ -218,6 +219,7 @@ public class SeleniumUtils {
 		try {
 			FileUtils.copyFile(src, new File(destLoc));
 		} catch (IOException e) {
+			lg.debug("The copying the picture failed");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
