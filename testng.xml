@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="sanity" verbose="1">
+  <listeners>
+              <listener class-name="com.ebay.wipro.utilities.reports.TestngListener"/>
+   </listeners>
+ <test name="sanity">
+ <parameter name ="aPort" value="4723"/>
+		<!-- <groups>
+			<define name ="grps">
+				<include name="demo" />
+			</define>		
+			<run>
+				<include name="grps"/>
+			</run>
+		</groups> -->
+    	<packages>
+			<package name="com.ebay.wipro.testcases" />
+		</packages>
+	</test>
+</suite>
